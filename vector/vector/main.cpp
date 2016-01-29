@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "Vector.h"
+using namespace epl;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     std::cout << "Hello, World!\n";
+    vector <int> v;
+    v.push_back(5);
+    v.push_back(4);
+    v.print();
     return 0;
 }
