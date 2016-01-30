@@ -6,6 +6,7 @@
 #include <iostream>
 #include <cstdint>
 #include <stdexcept>
+#include <assert.h>
 
 namespace epl{
 
@@ -16,7 +17,7 @@ private:
     T ** data;
     uint64_t capacity;
     uint64_t length;
-    uint64_t head, tail;
+    uint64_t head;
     const static uint64_t DEFAULT_CAPACITY = 8;
 public:
     /* Default Constructor */
@@ -25,7 +26,6 @@ public:
         capacity = DEFAULT_CAPACITY;
         length = 0;
         head = 0;
-        tail = -1;
         
     }
     /* Constructor with an argument of size */
@@ -34,12 +34,12 @@ public:
             data = new T* [DEFAULT_CAPACITY];
             capacity = DEFAULT_CAPACITY;
             length = 0;
-            head = 0, tail = -1;
+            head = 0;
         } else {
             data = new T* [n];
             this -> capacity = n;
             length = n;
-            head = 0, tail = length - 1;
+            head = 0;
             for (uint64_t i = 0; i < n; i++)
                 data[i] = new T;
         }
@@ -51,19 +51,19 @@ public:
     /* Copy assignment */
     vector& operator=(vector const& rhs) {
         if (this != &rhs) {
-            destroy();
+            destroy(data, capacity, length, head);
             copy(rhs);
         }
         return *this;
     }
     
     /*Move constructor */
-    vector(vector && tmp) { move(tmp); }
+    vector(vector && tmp) { move(std::move(tmp)); }
     /*Move assignment */
     vector& operator=(vector&& rhs) {
         if (this != & rhs) {
-            destroy();
-            move(rhs);
+            destroy(data, capacity, length, head);
+            move(std::move(rhs));
         }
         return *this;
     }
@@ -82,36 +82,52 @@ public:
     }
     
     /* return the number of constructed objects in the vector */
-    uint64_t getLength(void) const { return length; }
+    uint64_t size(void) const { return length; }
     
     /* add a new value to the end of the array */
     void push_back(const T& element) {
-        length++;
         if (length == capacity) resize();
-        tail++;
-        data[tail] = new T{element};
+        data[(head + length + capacity) % capacity] = new T{element};
+        length++;
     }
     /* add a new value to the end of the array */
     void push_back(T&& element) {
-        length++;
         if (length == capacity) resize();
-        tail++;
-        data[tail] = new T{std::move(element)};
-
+        data[(head + length + capacity) % capacity] = new T{std::move(element)};
+        length++;
     }
     /* add a new value to the front of the array */
     void push_front(const T& element) {
-        length++;
         if (length == capacity) resize();
-        head--;
-        data[(head + length) % length] = new T{element};
+        head = (head + capacity - 1) % capacity;
+        data[head] = new T{element};
+        length++;
     }
     /* add a new value to the front of the array */
     void push_front(T&& element) {
-        length++;
         if (length == capacity) resize();
-        head--;
-        data[(head + length) % length] = new T{std::move(element)};
+        head = (head + capacity - 1) % capacity;
+        data[head] = new T{std::move(element)};
+        length++;
+    }
+    
+    void pop_front() {
+        if (length == 0)
+            throw std::out_of_range{"subscript out of range"};
+        else {
+            delete data[head];
+            head = (head + capacity + 1) % capacity;
+            length--;
+        }
+    }
+    
+    void pop_back() {
+        if (length == 0)
+            throw std::out_of_range{"subscript out of range"};
+        else {
+            delete data[(head + length - 1) % capacity];
+            length--;
+        }
     }
     
     void print() {
@@ -129,17 +145,17 @@ private:
         data = new T* [capacity];
         length = that.length;
         head = that.head;
-        tail = that.tail;
         for (uint64_t i = 0; i < length; i++)
             data[i] = new T(*that.data[i]);
     }
     
-    void move(const vector&& tmp) {
+    void move(vector&& tmp) {
         capacity = tmp.capacity;
         data = tmp.data;
         length = tmp.length;
         head = tmp.head;
-        tail = tmp.tail;
+        tmp.data = nullptr;
+        tmp.length = 0;
     }
     
     void resize() {
@@ -147,16 +163,18 @@ private:
         T ** old = data;
         data = new T* [capacity];
         for (uint64_t i = 0; i < length; i++) {
-            data[i] = old[i];
+            data[i] = old[(head + i + (capacity/2)) % (capacity/2)];
         }
-        destroy(old, capacity, length, head);
+        delete[] old;
         head = 0;
     }
         
     void destroy(T ** data, uint64_t capacity, uint64_t length, uint64_t head) {
         for (int k = 0; k < length; k++) {
+//            assert(*(data[(head + k + capacity) % capacity]) == k);
             delete data[(head + k + capacity) % capacity];
         }
+        delete[] data;
     }
  
     
