@@ -133,7 +133,7 @@ public:
     void print() {
         for (int k = 0; k < length; k++)
             std::cout << (*this)[k] << " ";
-//        std::cout<< "big ass";
+//        std::cout<< "dd";
     }
     
     
