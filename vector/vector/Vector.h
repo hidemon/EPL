@@ -14,7 +14,7 @@ template <typename T>
     
 class vector {
 private:
-    T ** data;
+    T * data;
     uint64_t capacity;
     uint64_t length;
     uint64_t head;
@@ -22,8 +22,8 @@ private:
 public:
     /* Default Constructor */
     vector(void) {
-        data = new T* [DEFAULT_CAPACITY];
         capacity = DEFAULT_CAPACITY;
+        data = (T*) ::operator new(capacity * sizeof(T));
         length = 0;
         head = 0;
         
@@ -31,17 +31,17 @@ public:
     /* Constructor with an argument of size */
     vector(uint64_t n) {
         if (n == 0) {
-            data = new T* [DEFAULT_CAPACITY];
             capacity = DEFAULT_CAPACITY;
+            data = (T*) ::operator new(capacity * sizeof(T));
             length = 0;
             head = 0;
         } else {
-            data = new T* [n];
             this -> capacity = n;
+            data = (T*) ::operator new(capacity * sizeof(T));
             length = n;
             head = 0;
             for (uint64_t i = 0; i < n; i++)
-                data[i] = new T;
+                new (data + i) T{};
         }
     }
     ~vector(void) { destroy(data, capacity, length, head); }
@@ -71,14 +71,14 @@ public:
     T& operator[](uint64_t k) {
         if (k >= length)
             throw std::out_of_range{"subscript out of range"};
-        return *data[(head + k + capacity) % capacity];
+        return data[(head + k + capacity) % capacity];
         
     }
     
     const T& operator[](uint64_t const k) const {
         if (k >= length)
             throw std::out_of_range{"subscript out of range"};
-        return *data[(head + k + capacity) % capacity];
+        return data[(head + k + capacity) % capacity];
     }
     
     /* return the number of constructed objects in the vector */
@@ -87,27 +87,27 @@ public:
     /* add a new value to the end of the array */
     void push_back(const T& element) {
         if (length == capacity) resize();
-        data[(head + length + capacity) % capacity] = new T{element};
+        new (data + ((head + length + capacity) % capacity)) T{element};
         length++;
     }
     /* add a new value to the end of the array */
     void push_back(T&& element) {
         if (length == capacity) resize();
-        data[(head + length + capacity) % capacity] = new T{std::move(element)};
+        new (data + ((head + length + capacity) % capacity)) T{std::move(element)};
         length++;
     }
     /* add a new value to the front of the array */
     void push_front(const T& element) {
         if (length == capacity) resize();
         head = (head + capacity - 1) % capacity;
-        data[head] = new T{element};
+        new (data + head) T{element};
         length++;
     }
     /* add a new value to the front of the array */
     void push_front(T&& element) {
         if (length == capacity) resize();
         head = (head + capacity - 1) % capacity;
-        data[head] = new T{std::move(element)};
+        new (data + head) T{std::move(element)};
         length++;
     }
     
@@ -115,7 +115,7 @@ public:
         if (length == 0)
             throw std::out_of_range{"subscript out of range"};
         else {
-            delete data[head];
+            data[head].~T();
             head = (head + capacity + 1) % capacity;
             length--;
         }
@@ -125,7 +125,7 @@ public:
         if (length == 0)
             throw std::out_of_range{"subscript out of range"};
         else {
-            delete data[(head + length - 1) % capacity];
+            data[(head + length - 1) % capacity].~T();
             length--;
         }
     }
@@ -142,11 +142,11 @@ private:
     /*Copy function is used to implement copy constructor and assignment*/
     void copy(vector<T> const & that) {
         capacity = that.capacity;
-        data = new T* [capacity];
+        data = (T*) ::operator new(capacity * sizeof(T));
         length = that.length;
         head = that.head;
         for (uint64_t i = 0; i < length; i++)
-            data[i] = new T(*that.data[i]);
+            new (data + i) T{that.data[i]};
     }
     
     void move(vector&& tmp) {
@@ -160,21 +160,21 @@ private:
     
     void resize() {
         capacity = capacity * 2;
-        T ** old = data;
-        data = new T* [capacity];
+        T * old = data;
+        data = (T*) ::operator new(capacity * sizeof(T));
         for (uint64_t i = 0; i < length; i++) {
-            data[i] = old[(head + i + (capacity/2)) % (capacity/2)];
+            new (data + i) T{std::move(old[(head + i + (capacity/2)) % (capacity/2)])};
         }
-        delete[] old;
+        ::operator delete (old);
         head = 0;
     }
         
-    void destroy(T ** data, uint64_t capacity, uint64_t length, uint64_t head) {
+    void destroy(T * data, uint64_t capacity, uint64_t length, uint64_t head) {
         for (int k = 0; k < length; k++) {
 //            assert(*(data[(head + k + capacity) % capacity]) == k);
-            delete data[(head + k + capacity) % capacity];
+            data[(head + k + capacity) % capacity].~T();
         }
-        delete[] data;
+        ::operator delete (data);
     }
  
     
