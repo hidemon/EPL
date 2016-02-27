@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6E850D2BF4BD7B699EF685427960EF8C26CD9111",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "4b9a4021-55c6-49ef-8927-9a4c88dedecd++8146" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6E850D2BF4BD7B699EF685427960EF8C26CD9111" : 0,
+    "4b9a4021-55c6-49ef-8927-9a4c88dedecd++8146" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A74E9DB4-A39B-4AB3-86E4-EB467B502FD3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6E850D2BF4BD7B699EF685427960EF8C26CD9111" : "EPL\/",
+    "4b9a4021-55c6-49ef-8927-9a4c88dedecd++8146" : "EPLsp2016\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LifeForm",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LifeForm\/LifeForm.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/lennon.ece.utexas.edu\/ee380l.5",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4b9a4021-55c6-49ef-8927-9a4c88dedecd++8146"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hidemon\/EPL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6E850D2BF4BD7B699EF685427960EF8C26CD9111"
+    }
+  ]
+}

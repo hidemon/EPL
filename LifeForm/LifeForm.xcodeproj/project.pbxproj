@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE7EAE981C7F735000027977 /* Algae.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE7D1C7F735000027977 /* Algae.cpp */; };
+		DE7EAE991C7F735000027977 /* animals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE7F1C7F735000027977 /* animals.cpp */; };
+		DE7EAE9A1C7F735000027977 /* Craig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE821C7F735000027977 /* Craig.cpp */; };
+		DE7EAE9B1C7F735000027977 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE851C7F735000027977 /* Event.cpp */; };
+		DE7EAE9C1C7F735000027977 /* LifeForm-Craig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE891C7F735000027977 /* LifeForm-Craig.cpp */; };
+		DE7EAE9D1C7F735000027977 /* LifeForm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE8A1C7F735000027977 /* LifeForm.cpp */; };
+		DE7EAE9E1C7F735000027977 /* Params.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE8D1C7F735000027977 /* Params.cpp */; };
+		DE7EAE9F1C7F735000027977 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE7EAE961C7F735000027977 /* Window.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE7EAE711C7F731900027977 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE7EAE731C7F731900027977 /* LifeForm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LifeForm; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7EAE7D1C7F735000027977 /* Algae.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algae.cpp; sourceTree = "<group>"; };
+		DE7EAE7E1C7F735000027977 /* Algae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algae.h; sourceTree = "<group>"; };
+		DE7EAE7F1C7F735000027977 /* animals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = animals.cpp; sourceTree = "<group>"; };
+		DE7EAE801C7F735000027977 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		DE7EAE811C7F735000027977 /* Cons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cons.h; sourceTree = "<group>"; };
+		DE7EAE821C7F735000027977 /* Craig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Craig.cpp; sourceTree = "<group>"; };
+		DE7EAE831C7F735000027977 /* Craig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Craig.h; sourceTree = "<group>"; };
+		DE7EAE841C7F735000027977 /* CraigUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CraigUtils.h; sourceTree = "<group>"; };
+		DE7EAE851C7F735000027977 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		DE7EAE861C7F735000027977 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		DE7EAE881C7F735000027977 /* Init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Init.h; sourceTree = "<group>"; };
+		DE7EAE891C7F735000027977 /* LifeForm-Craig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "LifeForm-Craig.cpp"; sourceTree = "<group>"; };
+		DE7EAE8A1C7F735000027977 /* LifeForm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LifeForm.cpp; sourceTree = "<group>"; };
+		DE7EAE8B1C7F735000027977 /* LifeForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeForm.h; sourceTree = "<group>"; };
+		DE7EAE8C1C7F735000027977 /* ObjInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjInfo.h; sourceTree = "<group>"; };
+		DE7EAE8D1C7F735000027977 /* Params.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Params.cpp; sourceTree = "<group>"; };
+		DE7EAE8E1C7F735000027977 /* Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Params.h; sourceTree = "<group>"; };
+		DE7EAE8F1C7F735000027977 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		DE7EAE901C7F735000027977 /* QuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadTree.h; sourceTree = "<group>"; };
+		DE7EAE911C7F735000027977 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		DE7EAE921C7F735000027977 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		DE7EAE931C7F735000027977 /* SimTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimTime.h; sourceTree = "<group>"; };
+		DE7EAE941C7F735000027977 /* SmartPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPointer.h; sourceTree = "<group>"; };
+		DE7EAE951C7F735000027977 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
+		DE7EAE961C7F735000027977 /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		DE7EAE971C7F735000027977 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE7EAE701C7F731900027977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE7EAE6A1C7F731900027977 = {
+			isa = PBXGroup;
+			children = (
+				DE7EAE751C7F731900027977 /* LifeForm */,
+				DE7EAE741C7F731900027977 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE7EAE741C7F731900027977 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE7EAE731C7F731900027977 /* LifeForm */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE7EAE751C7F731900027977 /* LifeForm */ = {
+			isa = PBXGroup;
+			children = (
+				DE7EAE7D1C7F735000027977 /* Algae.cpp */,
+				DE7EAE7E1C7F735000027977 /* Algae.h */,
+				DE7EAE7F1C7F735000027977 /* animals.cpp */,
+				DE7EAE801C7F735000027977 /* Color.h */,
+				DE7EAE811C7F735000027977 /* Cons.h */,
+				DE7EAE821C7F735000027977 /* Craig.cpp */,
+				DE7EAE831C7F735000027977 /* Craig.h */,
+				DE7EAE841C7F735000027977 /* CraigUtils.h */,
+				DE7EAE851C7F735000027977 /* Event.cpp */,
+				DE7EAE861C7F735000027977 /* Event.h */,
+				DE7EAE881C7F735000027977 /* Init.h */,
+				DE7EAE891C7F735000027977 /* LifeForm-Craig.cpp */,
+				DE7EAE8A1C7F735000027977 /* LifeForm.cpp */,
+				DE7EAE8B1C7F735000027977 /* LifeForm.h */,
+				DE7EAE8C1C7F735000027977 /* ObjInfo.h */,
+				DE7EAE8D1C7F735000027977 /* Params.cpp */,
+				DE7EAE8E1C7F735000027977 /* Params.h */,
+				DE7EAE8F1C7F735000027977 /* Point.h */,
+				DE7EAE901C7F735000027977 /* QuadTree.h */,
+				DE7EAE911C7F735000027977 /* Random.h */,
+				DE7EAE921C7F735000027977 /* README.txt */,
+				DE7EAE931C7F735000027977 /* SimTime.h */,
+				DE7EAE941C7F735000027977 /* SmartPointer.h */,
+				DE7EAE951C7F735000027977 /* tokens.h */,
+				DE7EAE961C7F735000027977 /* Window.cpp */,
+				DE7EAE971C7F735000027977 /* Window.h */,
+			);
+			path = LifeForm;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE7EAE721C7F731900027977 /* LifeForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE7EAE7A1C7F731900027977 /* Build configuration list for PBXNativeTarget "LifeForm" */;
+			buildPhases = (
+				DE7EAE6F1C7F731900027977 /* Sources */,
+				DE7EAE701C7F731900027977 /* Frameworks */,
+				DE7EAE711C7F731900027977 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeForm;
+			productName = LifeForm;
+			productReference = DE7EAE731C7F731900027977 /* LifeForm */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE7EAE6B1C7F731900027977 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = utaustin;
+				TargetAttributes = {
+					DE7EAE721C7F731900027977 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = DE7EAE6E1C7F731900027977 /* Build configuration list for PBXProject "LifeForm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE7EAE6A1C7F731900027977;
+			productRefGroup = DE7EAE741C7F731900027977 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE7EAE721C7F731900027977 /* LifeForm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE7EAE6F1C7F731900027977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE7EAE9C1C7F735000027977 /* LifeForm-Craig.cpp in Sources */,
+				DE7EAE9A1C7F735000027977 /* Craig.cpp in Sources */,
+				DE7EAE981C7F735000027977 /* Algae.cpp in Sources */,
+				DE7EAE9B1C7F735000027977 /* Event.cpp in Sources */,
+				DE7EAE9F1C7F735000027977 /* Window.cpp in Sources */,
+				DE7EAE991C7F735000027977 /* animals.cpp in Sources */,
+				DE7EAE9D1C7F735000027977 /* LifeForm.cpp in Sources */,
+				DE7EAE9E1C7F735000027977 /* Params.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DE7EAE781C7F731900027977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DE7EAE791C7F731900027977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DE7EAE7B1C7F731900027977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				HEADER_SEARCH_PATHS = "/opt/local/include/**";
+				LIBRARY_SEARCH_PATHS = "/opt/local/lib/**";
+				New_Setting = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib",
+					"-Wl,-headerpad_max_install_names",
+					"-lfltk",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/opt/local/include/**";
+			};
+			name = Debug;
+		};
+		DE7EAE7C1C7F731900027977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
+				HEADER_SEARCH_PATHS = "/opt/local/include/**";
+				LIBRARY_SEARCH_PATHS = "/opt/local/lib/**";
+				New_Setting = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib",
+					"-Wl,-headerpad_max_install_names",
+					"-lfltk",
+					"-lpthread",
+					"-framework",
+					Cocoa,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/opt/local/include/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE7EAE6E1C7F731900027977 /* Build configuration list for PBXProject "LifeForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7EAE781C7F731900027977 /* Debug */,
+				DE7EAE791C7F731900027977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE7EAE7A1C7F731900027977 /* Build configuration list for PBXNativeTarget "LifeForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE7EAE7B1C7F731900027977 /* Debug */,
+				DE7EAE7C1C7F731900027977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE7EAE6B1C7F731900027977 /* Project object */;
+}
